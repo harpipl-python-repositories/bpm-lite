@@ -133,3 +133,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# BPMN upload settings
+MAX_FILE_SIZE_MB = 10  # Maximum size of a single file in MB
+MAX_FILES_IN_ZIP = 100  # Maximum number of files in a ZIP archive

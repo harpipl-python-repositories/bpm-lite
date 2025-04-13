@@ -27,20 +27,26 @@ def test_gateway_from_xml():
     assert gateway.name == "Approve request"
 
 def test_service_task_from_xml():
+    # given
     xml = '<serviceTask id="task2" name="Send Email" implementation="mailService" />'
     elem = fromstring(xml)
 
+    # when
     task = ServiceTaskDef.from_xml(elem)
 
+    # then
     assert task.id == "task2"
     assert task.name == "Send Email"
     assert task.implementation == "mailService"
 
 def test_start_event_from_xml():
+    # given
     xml = '<startEvent id="start1" name="Start" />'
     elem = fromstring(xml)
 
+    # when
     start = StartEventDef.from_xml(elem)
 
+    # then  
     assert start.id == "start1"
     assert start.name == "Start"

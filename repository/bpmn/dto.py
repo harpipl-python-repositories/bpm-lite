@@ -46,7 +46,6 @@ class ServiceTaskDef(BpmnElement):
         )
 
 
-# 🔹 Nowe: startEvent
 @register_bpmn_tag("startEvent")
 @dataclass
 class StartEventDef(BpmnElement):

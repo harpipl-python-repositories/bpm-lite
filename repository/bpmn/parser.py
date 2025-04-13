@@ -1,8 +1,6 @@
-# bpmn/parser.py
-
 import xml.etree.ElementTree as ET
 from .base import BpmnElement
-from .dto import *  # ważne, by załadować wszystkie klasy DTO
+from .dto import *
 
 BPMN_NS = "{http://www.omg.org/spec/BPMN/20100524/MODEL}"
 
@@ -27,7 +25,6 @@ def discover_bpmn_parsers():
 
 
 ELEMENT_PARSERS = discover_bpmn_parsers()
-
 
 def parse_bpmn(xml_content: bytes) -> ProcessDef:
     root = ET.fromstring(xml_content)
