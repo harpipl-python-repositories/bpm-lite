@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" targetNamespace="http://bpmn.io/schema/bpmn">
+  <process id="example-process" name="Example Process">
+    <startEvent id="start" name="Start" />
+    <userTask id="task1" name="Approve request" />
+    <exclusiveGateway id="gateway1" name="Decision" />
+    <sequenceFlow id="flow1" sourceRef="start" targetRef="task1" />
+  </process>
+</definitions>

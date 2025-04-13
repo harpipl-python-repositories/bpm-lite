@@ -1,0 +1,18 @@
+services:
+  db:
+    image: docker.io/bitnami/postgresql:17
+    container_name: db-bpm-lite-local-dev
+    restart: always
+    ports:
+      - '5432:5432'
+    volumes:
+      - 'postgresql_data:/bitnami/postgresql'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+      - POSTGRESQL_USERNAME=user
+      - POSTGRESQL_PASSWORD=user
+      - POSTGRESQL_DATABASE=bpm-lite
+
+volumes:
+  postgresql_data:
+    driver: local
